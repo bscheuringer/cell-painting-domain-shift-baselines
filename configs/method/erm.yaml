@@ -1,0 +1,4 @@
+# @package model
+# ERM — Empirical Risk Minimisation (standard cross-entropy baseline).
+# Frozen BatchNorm running stats at test time.
+framework: erm

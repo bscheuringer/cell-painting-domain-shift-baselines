@@ -1,0 +1,127 @@
+{
+  "description": "K=5 batch-level cross-validation on JUMP-CP Source_3 (sklearn KFold, shuffle=True, random_state=42). Test = held-out batch group; val = round-robin selected batch from the remaining non-test pool (rotates by fold index); train = rest.",
+  "generated_at": "2026-03-04T16:08:53.459092+00:00",
+  "num_folds": 5,
+  "num_batches": 9,
+  "all_batches": [
+    "CP59",
+    "CP60",
+    "CP_25_all_Phenix1",
+    "CP_26_all_Phenix1",
+    "CP_27_all_Phenix1",
+    "CP_28_all_Phenix1",
+    "CP_29_all_Phenix1",
+    "CP_31_all_Phenix1",
+    "CP_32_all_Phenix1"
+  ],
+  "strategy": "kfold",
+  "k": 5,
+  "seed": 42,
+  "folds": [
+    {
+      "fold": 0,
+      "test_batches": [
+        "CP60",
+        "CP_31_all_Phenix1"
+      ],
+      "val_batches": [
+        "CP59"
+      ],
+      "train_batches": [
+        "CP_25_all_Phenix1",
+        "CP_26_all_Phenix1",
+        "CP_27_all_Phenix1",
+        "CP_28_all_Phenix1",
+        "CP_29_all_Phenix1",
+        "CP_32_all_Phenix1"
+      ],
+      "n_test": 11502,
+      "n_val": 5760,
+      "n_train": 32229
+    },
+    {
+      "fold": 1,
+      "test_batches": [
+        "CP59",
+        "CP_28_all_Phenix1"
+      ],
+      "val_batches": [
+        "CP_25_all_Phenix1"
+      ],
+      "train_batches": [
+        "CP60",
+        "CP_26_all_Phenix1",
+        "CP_27_all_Phenix1",
+        "CP_29_all_Phenix1",
+        "CP_31_all_Phenix1",
+        "CP_32_all_Phenix1"
+      ],
+      "n_test": 10629,
+      "n_val": 4896,
+      "n_train": 33966
+    },
+    {
+      "fold": 2,
+      "test_batches": [
+        "CP_25_all_Phenix1",
+        "CP_32_all_Phenix1"
+      ],
+      "val_batches": [
+        "CP_26_all_Phenix1"
+      ],
+      "train_batches": [
+        "CP59",
+        "CP60",
+        "CP_27_all_Phenix1",
+        "CP_28_all_Phenix1",
+        "CP_29_all_Phenix1",
+        "CP_31_all_Phenix1"
+      ],
+      "n_test": 10656,
+      "n_val": 5472,
+      "n_train": 33363
+    },
+    {
+      "fold": 3,
+      "test_batches": [
+        "CP_26_all_Phenix1",
+        "CP_27_all_Phenix1"
+      ],
+      "val_batches": [
+        "CP_28_all_Phenix1"
+      ],
+      "train_batches": [
+        "CP59",
+        "CP60",
+        "CP_25_all_Phenix1",
+        "CP_29_all_Phenix1",
+        "CP_31_all_Phenix1",
+        "CP_32_all_Phenix1"
+      ],
+      "n_test": 11232,
+      "n_val": 4869,
+      "n_train": 33390
+    },
+    {
+      "fold": 4,
+      "test_batches": [
+        "CP_29_all_Phenix1"
+      ],
+      "val_batches": [
+        "CP_27_all_Phenix1"
+      ],
+      "train_batches": [
+        "CP59",
+        "CP60",
+        "CP_25_all_Phenix1",
+        "CP_26_all_Phenix1",
+        "CP_28_all_Phenix1",
+        "CP_31_all_Phenix1",
+        "CP_32_all_Phenix1"
+      ],
+      "n_test": 5472,
+      "n_val": 5760,
+      "n_train": 38259
+    }
+  ]
+}

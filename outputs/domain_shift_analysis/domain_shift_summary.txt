@@ -1,0 +1,66 @@
+
+======================================================================
+DOMAIN SHIFT ANALYSIS SUMMARY
+======================================================================
+
+K9 LOBO ERM test accuracy per batch (easiest → hardest):
+  CP_25_all_Phenix1                 96.078%  ← easiest
+  CP60                              93.854%  ← easiest
+  CP_27_all_Phenix1                 91.892%
+  CP_29_all_Phenix1                 91.137%
+  CP_26_all_Phenix1                 87.171%
+  CP_28_all_Phenix1                 83.994%
+  CP59                              82.760%
+  CP_31_all_Phenix1                 77.540%  ← hardest
+  CP_32_all_Phenix1                 76.198%  ← hardest
+
+Images analysed: 1,800 from 9 batches (200 on average per batch).
+
+HARD batches: CP 32, CP 31, CP59
+EASY batches: CP 27, CP60, CP 25
+
+Top 20 most diverging features (ranked by Wasserstein distance):
+
+  Feature                                       Hard μ    Easy μ   Δ (e-h)      KS       p       W₁
+  ------------------------------------------------------------------------------------------------------
+  RNA_sat_low                                   0.4312    0.2843   -0.1468   0.188   0.000   0.1471
+  AGP_sat_low                                   0.4674    0.3883   -0.0791   0.167   0.000   0.0807
+  ER_sat_low                                    0.1850    0.1068   -0.0781   0.300   0.000   0.0792
+  DNA_sat_low                                   0.4385    0.3645   -0.0740   0.148   0.000   0.0766
+  corr_Mito_RNA                                 0.4050    0.3383   -0.0668   0.217   0.000   0.0674
+  ER_p95                                        0.2141    0.2645   +0.0504   0.253   0.000   0.0505
+  corr_DNA_Mito                                 0.8113    0.7639   -0.0474   0.287   0.000   0.0493
+  corr_AGP_Mito                                 0.7682    0.7212   -0.0470   0.237   0.000   0.0489
+  ER_dynamic_range                              0.1930    0.2370   +0.0441   0.258   0.000   0.0442
+  corr_DNA_RNA                                  0.6423    0.6010   -0.0414   0.272   0.000   0.0416
+  ER_iqr                                        0.0879    0.1220   +0.0341   0.292   0.000   0.0343
+  corr_AGP_ER                                   0.7848    0.8168   +0.0320   0.212   0.000   0.0320
+  ER_median                                     0.0643    0.0961   +0.0318   0.238   0.000   0.0318
+  corr_ER_Mito                                  0.6808    0.6507   -0.0301   0.185   0.000   0.0311
+  ER_mean                                       0.0877    0.1159   +0.0282   0.268   0.000   0.0283
+  corr_DNA_ER                                   0.7697    0.7893   +0.0196   0.145   0.000   0.0245
+  RNA_p95                                       0.2100    0.2331   +0.0231   0.123   0.000   0.0231
+  corr_ER_RNA                                   0.4230    0.4161   -0.0069   0.117   0.001   0.0201
+  AGP_p95                                       0.2441    0.2633   +0.0192   0.125   0.000   0.0199
+  RNA_dynamic_range                             0.1932    0.2123   +0.0190   0.118   0.000   0.0193
+
+--- Grouped insights ---
+  Mean intensity                          avg W₁=0.0119  avg Δ=+0.0110  (higher in easy)
+  Intensity std                           avg W₁=0.0055  avg Δ=+0.0039  (higher in easy)
+  Dynamic range (p95−p5)                  avg W₁=0.0197  avg Δ=+0.0149  (higher in easy)
+  Sharpness (Laplacian var.)              avg W₁=0.0002  avg Δ=+0.0002  (higher in easy)
+  Near-black fraction                     avg W₁=0.0782  avg Δ=-0.0758  (higher in hard)
+  Near-white fraction                     avg W₁=0.0000  avg Δ=-0.0000  (higher in hard)
+  High-frequency energy ratio             avg W₁=0.0002  avg Δ=+0.0000  (higher in easy)
+  Cross-channel correlation               avg W₁=0.0338  avg Δ=-0.0210  (higher in hard)
+
+Interpretation guide:
+  • Large W₁ (Wasserstein) + low p-value → strong distributional shift.
+  • 'Δ > 0' means the easy batches have higher values of that feature.
+  • 'Δ < 0' means the hard batches have higher values of that feature.
+  • Sharpness ↑ in easy batches → hard batches may be blurrier.
+  • Dynamic range ↑ in easy batches → hard batches have weaker signal.
+  • sat_low ↑ in hard batches → hard batches have more dark/unexposed areas.
+  • Cross-channel correlations changing → staining protocol differences.
+
+======================================================================

@@ -1,0 +1,6 @@
+# @package model
+# DANN — Domain-Adversarial Neural Network (Ganin et al. 2016).
+# Requires return_domain: true in data config.
+framework: dann
+penalty_weight: 1.0   # weight of the domain adversarial loss
+discriminator_lr: null  # absolute LR for domain head; null = same as backbone LR

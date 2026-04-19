@@ -1,0 +1,36 @@
+{
+  "run_name": "jumpcp-erm-lobo-fold6",
+  "method": "erm",
+  "fold_strategy": "lobo",
+  "fold_index": 6,
+  "fold_config_file": "data/splits/folds_k9_lobo.json",
+  "backbone": "resnet50",
+  "best_checkpoint": "<checkpoint-removed>",
+  "test_metrics": {
+    "test_loss": 0.23482050001621246,
+    "test_acc": 0.9248903393745422,
+    "test_acc_class_0": 0.9488304257392883,
+    "test_acc_class_1": 0.878654956817627,
+    "test_acc_class_2": 0.9868420958518982,
+    "test_acc_class_3": 0.9868420958518982,
+    "test_acc_class_4": 0.9722222089767456,
+    "test_acc_class_5": 0.8362573385238647,
+    "test_acc_class_6": 0.9985380172729492,
+    "test_acc_class_7": 0.7909356951713562,
+    "test_acc_domain_CP_29_all_Phenix1": 0.9248903393745422
+  },
+  "completed_at": "2026-03-27T22:13:21.284699+00:00",
+  "run_timestamp": "2026-03-27_19-24-15",
+  "git_commit": "9555d8bac89768e7cb5adfba1ad467046095c46f",
+  "seed": 456,
+  "precision": 32,
+  "max_epochs": 50,
+  "lr": 0.0006,
+  "batch_size": 32,
+  "env": {
+    "torch": "2.5.1+cu121",
+    "pytorch_lightning": "2.6.1",
+    "cuda": "12.1",
+    "gpu": "NVIDIA A100-SXM-64GB"
+  }
+}

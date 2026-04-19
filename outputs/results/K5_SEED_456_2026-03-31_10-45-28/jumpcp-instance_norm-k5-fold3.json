@@ -1,0 +1,37 @@
+{
+  "run_name": "jumpcp-instance_norm-k5-fold3",
+  "method": "instance_norm",
+  "fold_strategy": "k5",
+  "fold_index": 3,
+  "fold_config_file": "data/splits/folds_k5_seed42.json",
+  "backbone": "resnet50",
+  "best_checkpoint": "<checkpoint-removed>",
+  "test_metrics": {
+    "test_loss": 0.39601853489875793,
+    "test_acc": 0.8731303215026855,
+    "test_acc_class_0": 0.9551281929016113,
+    "test_acc_class_1": 0.7378917336463928,
+    "test_acc_class_2": 0.9693732261657715,
+    "test_acc_class_3": 0.9679487347602844,
+    "test_acc_class_4": 0.9935897588729858,
+    "test_acc_class_5": 0.5099714994430542,
+    "test_acc_class_6": 0.9494302272796631,
+    "test_acc_class_7": 0.9017093777656555,
+    "test_acc_domain_CP_26_all_Phenix1": 0.8243786692619324,
+    "test_acc_domain_CP_27_all_Phenix1": 0.9194444417953491
+  },
+  "completed_at": "2026-03-31T14:54:48.846255+00:00",
+  "run_timestamp": "2026-03-31_10-45-28",
+  "git_commit": "6dd382eca7da5134153d44255f685d68a417f430",
+  "seed": 456,
+  "precision": 32,
+  "max_epochs": 50,
+  "lr": 0.0006,
+  "batch_size": 32,
+  "env": {
+    "torch": "2.5.1+cu121",
+    "pytorch_lightning": "2.6.1",
+    "cuda": "12.1",
+    "gpu": "NVIDIA A100-SXM-64GB"
+  }
+}

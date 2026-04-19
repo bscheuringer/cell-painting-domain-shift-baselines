@@ -1,0 +1,37 @@
+{
+  "run_name": "jumpcp-dann-k5-fold3",
+  "method": "dann",
+  "fold_strategy": "k5",
+  "fold_index": 3,
+  "fold_config_file": "data/splits/folds_k5_seed42.json",
+  "backbone": "resnet50",
+  "best_checkpoint": "<checkpoint-removed>",
+  "test_metrics": {
+    "test_loss": 0.413989782333374,
+    "test_acc": 0.84731125831604,
+    "test_acc_class_0": 0.9579772353172302,
+    "test_acc_class_1": 0.8504273295402527,
+    "test_acc_class_2": 0.9273504018783569,
+    "test_acc_class_3": 0.9658119678497314,
+    "test_acc_class_4": 0.9893162250518799,
+    "test_acc_class_5": 0.6609686613082886,
+    "test_acc_class_6": 0.9636752009391785,
+    "test_acc_class_7": 0.46296295523643494,
+    "test_acc_domain_CP_26_all_Phenix1": 0.8260233402252197,
+    "test_acc_domain_CP_27_all_Phenix1": 0.8675346970558167
+  },
+  "completed_at": "2026-03-22T23:07:08.357459+00:00",
+  "run_timestamp": "2026-03-22_20-06-51",
+  "git_commit": "ec518fedc0faab19283c8954a9b792d86f2d5c3e",
+  "seed": 42,
+  "precision": 32,
+  "max_epochs": 50,
+  "lr": 0.0006,
+  "batch_size": 32,
+  "env": {
+    "torch": "2.5.1+cu121",
+    "pytorch_lightning": "2.6.1",
+    "cuda": "12.1",
+    "gpu": "NVIDIA A100-SXM-64GB"
+  }
+}

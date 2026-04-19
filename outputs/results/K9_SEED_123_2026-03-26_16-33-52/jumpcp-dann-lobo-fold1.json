@@ -1,0 +1,36 @@
+{
+  "run_name": "jumpcp-dann-lobo-fold1",
+  "method": "dann",
+  "fold_strategy": "lobo",
+  "fold_index": 1,
+  "fold_config_file": "data/splits/folds_k9_lobo.json",
+  "backbone": "resnet50",
+  "best_checkpoint": "<checkpoint-removed>",
+  "test_metrics": {
+    "test_loss": 0.5021898746490479,
+    "test_acc": 0.8024305701255798,
+    "test_acc_class_0": 0.8583333492279053,
+    "test_acc_class_1": 0.6319444179534912,
+    "test_acc_class_2": 0.956944465637207,
+    "test_acc_class_3": 1.0,
+    "test_acc_class_4": 1.0,
+    "test_acc_class_5": 0.18333333730697632,
+    "test_acc_class_6": 0.9791666865348816,
+    "test_acc_class_7": 0.8097222447395325,
+    "test_acc_domain_CP60": 0.8024305701255798
+  },
+  "completed_at": "2026-03-26T20:15:02.287293+00:00",
+  "run_timestamp": "2026-03-26_16-33-52",
+  "git_commit": "9555d8bac89768e7cb5adfba1ad467046095c46f",
+  "seed": 123,
+  "precision": 32,
+  "max_epochs": 50,
+  "lr": 0.0006,
+  "batch_size": 32,
+  "env": {
+    "torch": "2.5.1+cu121",
+    "pytorch_lightning": "2.6.1",
+    "cuda": "12.1",
+    "gpu": "NVIDIA A100-SXM-64GB"
+  }
+}

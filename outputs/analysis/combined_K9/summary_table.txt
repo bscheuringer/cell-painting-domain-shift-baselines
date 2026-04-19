@@ -1,0 +1,31 @@
+Method Comparison Summary
+=========================
+
+               n_folds mean_acc std_acc min_acc max_acc mean_worst_domain_acc mean_best_domain_acc
+method                                                                                            
+erm                 27   0.8649  0.0560  0.7620  0.9608                0.8649               0.8649
+dann                27   0.8359  0.0524  0.7467  0.9333                0.8359               0.8359
+instance_norm       27   0.8928  0.0459  0.7887  0.9500                0.8928               0.8928
+
+Per-fold test accuracy:
+
+method        erm   dann  instance_norm
+fold_index                             
+0          0.8444 0.8326         0.8774
+1          0.8761 0.8503         0.9284
+2          0.9188 0.8725         0.9333
+3          0.8578 0.8415         0.8615
+4          0.9011 0.9104         0.9378
+5          0.8681 0.8619         0.8932
+6          0.8982 0.8196         0.9101
+7          0.8506 0.7830         0.8918
+8          0.7686 0.7513         0.8019
+
+Pairwise Wilcoxon signed-rank tests:
+
+  ERM            vs DANN            n=27  Δ=+0.0290  p=0.0059 *
+  ERM            vs InstanceNorm    n=27  Δ=-0.0280  p=0.0022 *
+  DANN           vs InstanceNorm    n=27  Δ=-0.0569  p=0.0000 *
+
+  * significant at α=0.05
+

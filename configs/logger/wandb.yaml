@@ -1,0 +1,12 @@
+type: wandb
+name: "jumpcp"              # base; code will append -framework-backbone
+# Keep tags generic; code will add model-derived tags automatically
+tags: ["baseline"]
+
+wandb:
+  project: "JUMP_CP_Baseline"
+  entity: "your-wandb-entity"
+  group: "baselines"
+  job_type: "train"
+  offline: false
+  log_model: false

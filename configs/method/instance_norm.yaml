@@ -1,0 +1,4 @@
+# @package model
+# InstanceNorm — replace all BatchNorm2d with InstanceNorm2d.
+# Per-sample normalisation; no domain statistics ever accumulated.
+framework: instance_norm

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Domain Adaptation Baselines for Cell Painting Microscopy on JUMP-CP"
+type: software
+authors:
+  - family-names: Scheuringer
+    given-names: Berthold
+    orcid: ""
+repository-code: "https://github.com/bscheuringer/cell-painting-domain-shift-baselines"
+license: MIT
+date-released: "2026-04-19"
+keywords:
+  - domain adaptation
+  - cell painting
+  - JUMP-CP
+  - batch effects
+  - microscopy
+  - deep learning
